@@ -1,0 +1,25 @@
+.ant-tabs-tab-btn {
+  color: var(--black-color);
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: var(--active-color);
+}
+.create_box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: var(--bg-color);
+}
+#para{
+  margin-bottom: 1rem;
+  color: var(--low-opacity-45);
+}
+#helpimg{
+  position: fixed;
+  right: 4rem;
+  bottom: 1rem;
+}
+#helpimg:hover{
+  cursor: pointer;
+}

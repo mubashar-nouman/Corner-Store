@@ -1,0 +1,12 @@
+Table{
+    color: var(--low-opacity-55);
+    margin-top: 2rem;
+}
+.anticon-edit, .anticon-delete{
+    color: var(--low-opacity-55);
+}
+#products_h1{
+    margin-top: 3rem;
+    color: var(--primary);
+    font-size: 2rem;
+}

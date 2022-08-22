@@ -1,0 +1,10 @@
+.ant-btn-primary{
+    font-family: "Roboto";
+    padding: 0.4rem 1.6rem 1.6rem 1.6rem;
+    border-radius: 0.2rem;
+    background-color: var(--primary);
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

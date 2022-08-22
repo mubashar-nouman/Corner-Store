@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "antd/dist/antd.min.css";
+import React from "react";
+import "./App.css";
+import {Route, Routes} from "react-router-dom";
+import CreateStore from "./Pages/Create Store/CreateStore";
+import Verification from "./Pages/Verification Message/Verification";
+import EmailSetup from "./Pages/Email Setup/EmailSetup";
+import Success from "./Pages/Success/Success";
+import Error from "./Pages/Error/Error";
+import Dashboard from "./Pages/Dashboard";
+import Settings from "./Pages/Dashboard/Store Settings/Settings";
+import Customers from "./Pages/Customers/Customers";
+import Products from "./Pages/Dashboard/Products/Products";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <CreateStore/> */}
+      {/* <Verification/> */}
+      {/* <EmailSetup/> */}
+      {/* <Success/> */}
+      {/* <Error/> */}
+      {/* <Dashboard /> */}
+      <Routes>
+        <Route path="/" element={<Dashboard />} >
+          <Route index element={<Settings />} />
+          <Route path="customers" element={<Customers />} />
+          <Route path="products" element={<Products />} />
+        </Route>
+      </Routes>
+
+    </>
   );
 }
 

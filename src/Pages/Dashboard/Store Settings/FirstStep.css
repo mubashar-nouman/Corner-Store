@@ -1,0 +1,10 @@
+#first_h1{
+    text-align: center;
+    color: var(--detail-heading);
+    font-size: 2rem;
+}
+#first_p{
+    text-align: center;
+    color: var(--low-opacity-45);
+    margin-bottom: 2rem;
+}

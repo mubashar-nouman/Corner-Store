@@ -1,0 +1,17 @@
+#para_1 {
+  font-family: "Roboto";
+  font-size: 2.4rem;
+  color: var(--low-opacity-8);
+  margin-top: 2.9rem;
+  text-align: center;
+}
+#alertimg {
+  margin-top: 7.4rem;
+  width: 60%;
+}
+#para_2 {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.9rem;
+  color: var(--low-opacity-45);
+}

@@ -1,0 +1,42 @@
+#add_h1{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+#add_p{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--low-opacity-85);
+}
+
+#general_h1{
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    color: var(--primary);
+}
+#check_p{
+    font-size: 1.4rem;
+    color: var(--low-opacity-85);
+}
+.inp_group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.ant-pagination{
+    display: none;
+}
+.ant-upload.ant-upload-drag{
+    max-height: 80%;
+}
+
+.ant-input-number{
+    width: 100%;
+}
+.ant-input-number-input-wrap{
+    width: 100%;
+}

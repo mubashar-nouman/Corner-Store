@@ -1,56 +1,62 @@
 import React, { useState, useEffect } from "react";
-import {
-    EditOutlined,
-    DeleteOutlined,
-  } from '@ant-design/icons';
+import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Input, Space } from "antd";
 import qs from "qs";
-import { Row, Col, Button, TreeSelect, Table,Pagination } from "antd";
+import { Row, Col, Button, TreeSelect, Table, Pagination } from "antd";
+import './Customers.css'
 import { UploadOutlined } from "@ant-design/icons";
-import "./Product_comp.css";
+import TextField from "../../Components/TextField";
+
+const { Search } = Input;
+const onSearch = (value) => console.log(value);
 
 const columns = [
   {
     title: "NAME",
     dataIndex: "name",
     sorter: true,
-    render: (name) => `${name.first} ${name.last}`,
+    render: (name) => `Mubashar${1}`,
     width: "20%",
   },
   {
-    title: "COLLECTION",
-    dataIndex: "collection",
-    render:()=>
-    <>
-    <p>-</p>
-    </>
+    title: "EMAIL",
+    dataIndex: "email",
+    render: () => (
+      <>
+        <p>alfain@email.co</p>
+      </>
+    ),
   },
   {
-    title: "UNIT PRICE",
-    dataIndex: "price",
-    render:()=>
-    <>
-    <p>144 pkr/-</p>
-    </>
+    title: "DATE ADDED",
+    dataIndex: "date_added",
+    render: () => (
+      <>
+        <p>09-12-2022, 03:04PM</p>
+      </>
+    ),
   },
   {
-    title: "INVENTORY",
-    dataIndex: "inventory",
-    render:()=>
-    <>
-    <p>144 in stock for 5 variant (s)</p>
-    </>
+    title: "PAYMENT STATUS",
+    dataIndex: "pay_status",
+    render: () => (
+      <>
+        <ul>
+            <li>Paid</li>
+        </ul>
+      </>
+    ),
   },
   {
-    title: "ACTION",
-    dataIndex: "action",
-    title: 'Action',
-    dataIndex: '',
-    key: 'x',
-    render: () =>
-    <>
-    <a style={{fontSize:'2rem'}}><EditOutlined Style={{color:"rgba(58, 53, 65, 0.54);"}}/></a>
-    <a style={{marginLeft:'2rem', fontSize:'2rem'}}><DeleteOutlined /></a>
-    </>
+    title: "ORDER AMOUNT",
+    dataIndex: "amount",
+    dataIndex: "",
+    key: "x",
+    render: () => (
+      <>
+        <p>1400/- PKR</p>
+      </>
+    ),
   },
 ];
 
@@ -61,7 +67,7 @@ const getRandomuserParams = (params) => ({
 });
 // ######################################### FUNCTION START #########################################
 
-const Product_comp = () => {
+const Customers = () => {
   const [value, setValue] = useState();
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
@@ -156,28 +162,11 @@ const Product_comp = () => {
   return (
     <>
       <Row>
-        <Col xs={24} md={16}>
-          <TreeSelect
-            treeDataSimpleMode
-            style={{
-              width: "15%",
-            }}
-            value={value}
-            dropdownStyle={{
-              maxHeight: 400,
-              overflow: "auto",
-            }}
-            placeholder="Filter"
-            onChange={onChange}
-            loadData={onLoadData}
-            treeData={treeData}
-          />
+        <Col xs={24} md={12}>
+          <h1 id="products_h1" className="text">All Customers</h1>
         </Col>
-        <Col xs={24} md={{ span: 3 }} flex={{ justifyContent: "flex-end" }}>
-          <Button icon={<UploadOutlined />}>Export</Button>
-        </Col>
-        <Col xs={24} md={1}>
-          <Button type="primary">ADD NEW PRODUCT</Button>
+        <Col xs={24} md={12} style={{marginTop: "3rem",}}>
+          <TextField place="Search..."/>
         </Col>
       </Row>
 
@@ -189,10 +178,9 @@ const Product_comp = () => {
             rowKey={(record) => record.login.uuid}
             dataSource={data}
             scroll={{
-                x: 1000,
-              }}
+              x: 1000,
+            }}
             pagination={pagination}
-            
             loading={loading}
             onChange={handleTableChange}
           />
@@ -202,4 +190,4 @@ const Product_comp = () => {
   );
 };
 
-export default Product_comp;
+export default Customers;

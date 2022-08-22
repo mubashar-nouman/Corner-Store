@@ -1,0 +1,60 @@
+.dashLogo {
+  padding: 0.5rem 2rem;
+}
+.ant-layout-sider-children,
+.ant-layout-header {
+  background-color: white;
+}
+
+
+#dashFooter {
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  color: var(--low-opacity-);
+}
+.site-layout-background{
+    background-color: var(--white-color);
+}
+
+.ant-layout-header,
+.ant-layout-sider-trigger {
+  background-color: #255c66;
+}
+
+hr{
+    border: 0.5px solid rgba(0, 0, 0, 0.2);;
+}
+.profile_group{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6.4rem;
+}
+.anticon-question-circle, .anticon-search, .anticon-bell, .anticon-user{
+  color: var(--white-color);
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+.icon_group{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icons_row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#profile_img{
+  width: 2rem;
+  margin-left: 2rem;
+  margin-right: 0.7rem;
+}
+#profile_name{
+  margin-right: 2rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: "Roboto";
+  color: var(--white-color);
+  margin-bottom: 0;
+}

@@ -1,0 +1,11 @@
+.ant-col{
+    font-family: "Roboto";
+    font-weight: 400;
+    color: var(--low-opacity-8);
+}
+
+#underTxt{
+    font-size: 1.2rem;
+    color: var(--low-opacity-45);
+    margin-bottom: 0px;
+}
