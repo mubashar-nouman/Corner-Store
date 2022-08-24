@@ -166,8 +166,9 @@ const Discount = () => {
 
   return (
     <>
-      <Row style={{marginBottom: '2rem'}}>
-        <Col xs={24} md={12}>
+      <div className="discount_container">
+      <Row style={{marginBottom: '2rem', display: 'flex', justifyContent: 'flex-start'}}>
+        <Col xs={24} md={{ span: 18, offset: 0 }}>
           <TreeSelect
             treeDataSimpleMode
             style={{
@@ -184,41 +185,39 @@ const Discount = () => {
             treeData={treeData}
           />
         </Col>
-        <Row >
-            <Col xs={24} md={{ span: 3 }} >
-              <Button icon={<UploadOutlined />}>Export</Button>
-            </Col>
-            <Col xs={24} md={1}>
-              <Button type="primary">ADD NEW PRODUCT</Button>
-            </Col>
+        <Col xs={24} md={2} style={{marginRight:"10px"}}>
+          <Button icon={<UploadOutlined />}>Export</Button>
+        </Col>
+        <Col xs={24} md={3}>
+          <Button type="primary">ADD NEW PRODUCT</Button>
+        </Col>
+      </Row>
+        <hr />
+        <Row>
+          <Col xs={24} md={12}>
+            <h1 className="text">Discounts</h1>
+          </Col>
+          <Col xs={24} md={12} style={{marginTop: "3rem",}}>
+            <TextField place="Search..."/>
+          </Col>
         </Row>
-      </Row>
-      <hr />
-      <Row>
-        <Col xs={24} md={12}>
-          <h1 className="text">Discounts</h1>
-        </Col>
-        <Col xs={24} md={12} style={{marginTop: "3rem",}}>
-          <TextField place="Search..."/>
-        </Col>
-      </Row>
-
-      {/* ---------------------------------- Data Tables   -------------------------------- */}
-      <Row>
-        <Col span={24}>
-          <Table
-            columns={columns}
-            rowKey={(record) => record.login.uuid}
-            dataSource={data}
-            scroll={{
-              x: 1000,
-            }}
-            pagination={pagination}
-            loading={loading}
-            onChange={handleTableChange}
-          />
-        </Col>
-      </Row>
+        {/* ---------------------------------- Data Tables   -------------------------------- */}
+        <Row>
+          <Col span={24}>
+            <Table
+              columns={columns}
+              rowKey={(record) => record.login.uuid}
+              dataSource={data}
+              scroll={{
+                x: 1000,
+              }}
+              pagination={pagination}
+              loading={loading}
+              onChange={handleTableChange}
+            />
+          </Col>
+        </Row>
+      </div>
     </>
   );
 };

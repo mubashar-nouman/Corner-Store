@@ -9,4 +9,6 @@
     --active-color: #66cca1;
     --bg-color:#F0F2F5;
     --detail-heading: #255C66;
+    --comp-bg:var(--white-color);
+    --comp-padding: 10px 20px;
   }

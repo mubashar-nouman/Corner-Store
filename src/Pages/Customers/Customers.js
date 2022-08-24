@@ -161,31 +161,32 @@ const Customers = () => {
 
   return (
     <>
-      <Row>
-        <Col xs={24} md={12}>
-          <h1 id="products_h1" className="text">All Customers</h1>
-        </Col>
-        <Col xs={24} md={12} style={{marginTop: "3rem",}}>
-          <TextField place="Search..."/>
-        </Col>
-      </Row>
-
-      {/* ---------------------------------- Data Tables   -------------------------------- */}
-      <Row>
-        <Col span={24}>
-          <Table
-            columns={columns}
-            rowKey={(record) => record.login.uuid}
-            dataSource={data}
-            scroll={{
-              x: 1000,
-            }}
-            pagination={pagination}
-            loading={loading}
-            onChange={handleTableChange}
-          />
-        </Col>
-      </Row>
+      <div className="customer_container">
+        <Row>
+          <Col xs={24} md={12}>
+            <h1 id="products_h1" className="text">All Customers</h1>
+          </Col>
+          <Col xs={24} md={12} style={{marginTop: "3rem",}}>
+            <TextField place="Search..."/>
+          </Col>
+        </Row>
+        {/* ---------------------------------- Data Tables   -------------------------------- */}
+        <Row>
+          <Col span={24}>
+            <Table
+              columns={columns}
+              rowKey={(record) => record.login.uuid}
+              dataSource={data}
+              scroll={{
+                x: 1000,
+              }}
+              pagination={pagination}
+              loading={loading}
+              onChange={handleTableChange}
+            />
+          </Col>
+        </Row>
+      </div>
     </>
   );
 };

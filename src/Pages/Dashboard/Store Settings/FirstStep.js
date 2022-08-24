@@ -81,7 +81,7 @@ const FirstStep = () => {
                 <Col xs={24} id="first_p"><p>Fill in the following store dtails</p></Col>
             </Row>
           <Row justify="space-between">
-            <Col md={16}>
+            <Col md={17}>
               <Form {...layout}>
                 <TextField title="Store Name : " place="Enter store name" />
                 <TextField title="Store Contact# : " place="+92 300 0000000" />
@@ -102,7 +102,7 @@ const FirstStep = () => {
                 </Row>
               </Form>
             </Col>
-            <Col xs={12} md={8}>
+            <Col xs={12} md={6} style={{alignSelf:'self-start', marginLeft: '10px'}}>
             <Upload
               name="avatar"
               listType="picture-card"

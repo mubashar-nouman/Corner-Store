@@ -166,8 +166,8 @@ const Product_comp = () => {
 
   return (
     <>
-      <Row style={{marginBottom: '2rem'}}>
-        <Col xs={24} md={16}>
+      <Row style={{marginBottom: '2rem', display: 'flex', justifyContent: 'flex-start'}}>
+        <Col xs={24} md={{ span: 17, offset: 1 }}>
           <TreeSelect
             treeDataSimpleMode
             style={{
@@ -184,16 +184,16 @@ const Product_comp = () => {
             treeData={treeData}
           />
         </Col>
-        <Col xs={24} md={{ span: 3 }} flex={{ justifyContent: "flex-end" }}>
+        <Col xs={24} md={2} style={{marginRight:"10px"}}>
           <Button icon={<UploadOutlined />}>Export</Button>
         </Col>
-        <Col xs={24} md={1}>
+        <Col xs={24} md={3}>
           <Button type="primary">ADD NEW PRODUCT</Button>
         </Col>
       </Row>
       <hr />
       <Row>
-        <Col xs={24} md={12}>
+        <Col xs={24} md={12} >
           <h1 id="products_h1">Products Inventory</h1>
         </Col>
         <Col xs={24} md={12} style={{marginTop: "3rem",}}>

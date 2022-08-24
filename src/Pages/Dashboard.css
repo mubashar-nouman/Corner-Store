@@ -58,3 +58,6 @@ hr{
   color: var(--white-color);
   margin-bottom: 0;
 }
+.main_bg{
+  background-color: #f0f2f5;
+}

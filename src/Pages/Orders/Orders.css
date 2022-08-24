@@ -2,3 +2,7 @@ li::marker{
     color: red;
     font-size: 30px;
 }
+.orders_container{
+    background-color: white;
+    padding: 30px;
+}

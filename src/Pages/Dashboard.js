@@ -15,15 +15,17 @@ import { Breadcrumb, Layout, Menu, Steps } from "antd";
 import React, { Children, useState } from "react";
 import "./Dashboard.css";
 import SignUp from "./Create Store/SignUp";
-import Settings from "./Dashboard/Store Settings/Settings";
 import { Row, Col } from "antd";
 import User from "../img/profile.png";
 import ReactDOM from "react-dom/client";
 // import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
-import Customers from "./Customers/Customers";
+import Products from "./Dashboard/Products/Products";
 import Discount from "./Discount/Discount";
 import Item from "antd/lib/list/Item";
 import { Outlet, useNavigate } from "react-router-dom";
+import EmailSetup from "../Pages/Email Setup/EmailSetup"
+import Processing from "./Orders/Processing";
+import Orders from "./Orders/Orders";
 // import { Navigate } from "react-router-dom";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -113,19 +115,26 @@ const Dashboard = (props) => {
             {/* #######################################   HEADER COMPONENTS IS REMAINING ############################ */}
           </div>
         </Header>
+
+
+        
         <Content
           style={{
-            margin: "0 16px",
+            margin: "0 0px",
           }}
         >
           <div
-            className="site-layout-background"
+            className="site-layout-background main_bg"
             style={{
               padding: 24,
               minHeight: 360,
             }}
           >
-           <Outlet/>
+           {/* <Outlet/> */}
+           {/* <Products/> */}
+           {/* <Orders/> */}
+           {/* <Customers /> */}
+           <Processing/>
           </div>
         </Content>
         <Footer

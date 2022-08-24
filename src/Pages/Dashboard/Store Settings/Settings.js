@@ -38,33 +38,35 @@ const Settings = () => {
 
   return (
     <>
-      <Steps current={current} style={{marginBottom:'3rem'}}>
-        {steps.map((item) => (
-          <Step key={item.title} title={item.title} />
-        ))}
-      </Steps>
-      <div className="steps-content">{steps[current].content}</div>
-      <div className="steps-action">
-        {current < steps.length - 1 && (
-          <Button type="primary" onClick={() => next()}>
-            Next
-          </Button>
-        )}
-        {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Setting has been updated successfully')}>
-            Done
-          </Button>
-        )}
-        {current > 0 && (
-          <Button
-            style={{
-              margin: '0 8px',
-            }}
-            onClick={() => prev()}
-          >
-            Previous
-          </Button>
-        )}
+      <div className="settings_container">
+        <Steps current={current} style={{marginBottom:'3rem'}}>
+          {steps.map((item) => (
+            <Step key={item.title} title={item.title} />
+          ))}
+        </Steps>
+        <div className="steps-content">{steps[current].content}</div>
+        <div className="steps-action">
+          {current < steps.length - 1 && (
+            <Button type="primary" onClick={() => next()}>
+              Next
+            </Button>
+          )}
+          {current === steps.length - 1 && (
+            <Button type="primary" onClick={() => message.success('Setting has been updated successfully')}>
+              Done
+            </Button>
+          )}
+          {current > 0 && (
+            <Button
+              style={{
+                margin: '0 8px',
+              }}
+              onClick={() => prev()}
+            >
+              Previous
+            </Button>
+          )}
+        </div>
       </div>
     </>
   );

@@ -161,60 +161,57 @@ const Orders = () => {
 
   return (
     <>
-      <Row style={{marginBottom: '2rem'}}>
-        <Col xs={24} md={16}>
-          <TreeSelect
-            treeDataSimpleMode
-            style={{
-              width: "60px",
-            }}
-            value={value}
-            dropdownStyle={{
-              maxHeight: 400,
-              overflow: "auto",
-            }}
-            
-            placeholder="All"
-            onChange={onChange}
-            loadData={onLoadData}
-            treeData={treeData}
-          />
-        </Col>
-        <Col xs={24} md={{ span: 3, offset: 5 }} flex={{ justifyContent: "flex-end" }}>
-          <Button icon={<UploadOutlined />}>Export</Button>
-        </Col>
-      </Row>
-      <hr />
-      <Row>
-        <Col xs={24} md={12}>
-          <h1 id="products_h1">All Orders</h1>
-        </Col>
-        <Col xs={24} md={12} style={{marginTop: "3rem",}}>
-          <TextField place="Search..."/>
-        </Col>
-      </Row>
-
-      {/* ---------------------------------- Data Tables   -------------------------------- */}
-      <Row>
-        <Col span={24}>
-          <Table
-            columns={columns}
-            rowKey={(record) => record.login.uuid}
-            dataSource={data}
-            scroll={{
-              x: 1000,
-            }}
-            pagination={pagination}
-            loading={loading}
-            onChange={handleTableChange}
-          />
-        </Col>
-      </Row>
-      {/* <Row>
-        <Col>
-        <Pagination defaultCurrent={6} total={500} />
-        </Col>
-      </Row> */}
+      <div className="orders_container">
+        <Row style={{marginBottom: '2rem'}}>
+          <Col xs={24} md={16}>
+            <TreeSelect
+              treeDataSimpleMode
+              style={{
+                width: "60px",
+              }}
+              value={value}
+              dropdownStyle={{
+                maxHeight: 400,
+                overflow: "auto",
+              }}
+        
+              placeholder="All"
+              onChange={onChange}
+              loadData={onLoadData}
+              treeData={treeData}
+            />
+          </Col>
+          <Col xs={24} md={{ span: 3, offset: 5 }} flex={{ justifyContent: "flex-end" }}>
+            <Button icon={<UploadOutlined />}>Export</Button>
+          </Col>
+        </Row>
+        <hr />
+        <Row>
+          <Col xs={24} md={12}>
+            <h1 id="products_h1">All Orders</h1>
+          </Col>
+          <Col xs={24} md={12} style={{marginTop: "3rem",}}>
+            <TextField place="Search..."/>
+          </Col>
+        </Row>
+        {/* ---------------------------------- Data Tables   -------------------------------- */}
+        <Row>
+          <Col span={24}>
+            <Table
+              columns={columns}
+              rowKey={(record) => record.login.uuid}
+              dataSource={data}
+              scroll={{
+                x: 1000,
+              }}
+              pagination={pagination}
+              loading={loading}
+              onChange={handleTableChange}
+            />
+          </Col>
+        </Row>
+      </div>
+      
     </>
   );
 };
