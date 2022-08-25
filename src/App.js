@@ -11,6 +11,8 @@ import Dashboard from "./Pages/Dashboard";
 import Settings from "./Pages/Dashboard/Store Settings/Settings";
 import Customers from "./Pages/Customers/Customers";
 import Products from "./Pages/Dashboard/Products/Products";
+import Orders from "./Pages/Orders/Orders";
+import Discount from "./Pages/Discount/Discount";
 
 function App() {
   return (
@@ -23,9 +25,12 @@ function App() {
       {/* <Dashboard /> */}
       <Routes>
         <Route path="/" element={<Dashboard />} >
-          <Route index element={<Settings />} />
+          <Route index element={<Success />} />
           <Route path="customers" element={<Customers />} />
           <Route path="products" element={<Products />} />
+          <Route path="orders" element={<Orders />} />
+          <Route path="discounts" element={<Discount />} />
+          <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>
 

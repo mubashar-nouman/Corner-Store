@@ -59,9 +59,17 @@ const Dashboard = (props) => {
       case "2":
         navigate("/products")
         break;
+      case "3":
+        navigate("/orders")
+        break;
       case "4":
         navigate("/customers")
-
+        break;
+      case "5":
+        navigate("/discounts")
+        break;
+      case "7":
+        navigate("/settings")
         break;
       default:
         // code block
@@ -130,11 +138,11 @@ const Dashboard = (props) => {
               minHeight: 360,
             }}
           >
-           {/* <Outlet/> */}
+           <Outlet/>
            {/* <Products/> */}
            {/* <Orders/> */}
            {/* <Customers /> */}
-           <Processing/>
+           {/* <Processing/> */}
           </div>
         </Content>
         <Footer

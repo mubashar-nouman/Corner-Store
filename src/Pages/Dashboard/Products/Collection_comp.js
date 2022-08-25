@@ -220,8 +220,7 @@ const Collection_comp = (props) => {
         </Col>
         <Col
           xs={24}
-          md={{ span: 3, offset: 5 }}
-          flex={{ justifyContent: "flex-end" }}
+          md={{ span: 3, offset: 4 }}
         >
           <Button onClick={showModal} type="primary">
             Add New Collection
