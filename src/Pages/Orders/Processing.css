@@ -1,20 +1,28 @@
-#blueButton{
-    background-color: #108EE9;
+#blueButton {
+  background-color: #108ee9;
 }
-#order_h1{
-    font-size: 2rem;
-    color: #255C66;
+#order_h1 {
+  font-size: 2rem;
+  color: #255c66;
 }
-#cancelButton{
-    background: #FF5500;
-    color: white;
+#cancelButton {
+  background: #ff5500;
+  color: white;
+}
+.right_col_container {
+  background-color: white;
+}
+hr {
+  opacity: 0.5;
+}
+#cutomer_detail {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #255C66;
+
 }
 .left_col_container{
-    background-color: white;
-}
-.right_col_container{
-    background-color: white;
-}
-hr{
-    opacity: 0.5;
+    background-color: #fff;
+    padding: 19px 14px;
+    border-radius: 4px;
 }

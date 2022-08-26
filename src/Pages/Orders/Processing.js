@@ -1,6 +1,7 @@
 import React from "react";
 import { Breadcrumb, Row, Col, Button, Divider, Tag } from "antd";
 import "./Processing.css";
+import User from "../../img/profile.png";
 
 const Processing = () => {
   return (
@@ -59,17 +60,42 @@ const Processing = () => {
       <Row>
         <Col md={14}>
           <div className="left_col_container">
-            <Row>Hello</Row>
+            <div className="first_left_card">
+              <Row>
+                <Col>
+                  <p id="cutomer_detail">Customer Details</p>
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={2} style={{alignSelf: 'flex-start'}}>
+                  <img
+                    style={{ width: "2.5rem" }}
+                    id="profile_img"
+                    src={User}
+                    alt=""
+                  />
+                </Col>
+                <Col xs={16}>
+                  <h1>Zaynub</h1>
+                  <p>Lahore, PK</p>
+                </Col>
+              </Row>
+              <Row>
+                <Col offset={2}>
+                  <div className="" style={{borderRight: '1px solid rba(255,255,255,0.1)', paddingRight: '10px'}}>
+                    <p>Contact Information</p>
+                    <p>email@gmail.com</p>
+                    <p>+(028)-284 324 5843</p>
+                  </div>
+                </Col>
+              </Row>
+            </div>
           </div>
         </Col>
 
         <Col md={{ span: 9, offset: 1 }}>
           <div className="right_col_container">
-            <Row>
-              <Col>
-                
-              </Col>
-            </Row>
+            <Row></Row>
           </div>
         </Col>
       </Row>

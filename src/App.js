@@ -13,6 +13,7 @@ import Customers from "./Pages/Customers/Customers";
 import Products from "./Pages/Dashboard/Products/Products";
 import Orders from "./Pages/Orders/Orders";
 import Discount from "./Pages/Discount/Discount";
+import Processing from "./Pages/Orders/Processing";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="products" element={<Products />} />
           <Route path="orders" element={<Orders />} />
           <Route path="discounts" element={<Discount />} />
+          <Route path="subscription" element={<Processing />} />
           <Route path="settings" element={<Settings />} />
         </Route>
       </Routes>

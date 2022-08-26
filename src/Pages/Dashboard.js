@@ -68,6 +68,9 @@ const Dashboard = (props) => {
       case "5":
         navigate("/discounts")
         break;
+      case "6":
+        navigate("/subscription")
+        break;
       case "7":
         navigate("/settings")
         break;
