@@ -11,18 +11,25 @@
 }
 .right_col_container {
   background-color: white;
+  padding: 19px 14px;
+  border-radius: 4px;
 }
 hr {
   opacity: 0.5;
 }
-#cutomer_detail {
+#cutomer_detail #order_details {
   font-weight: 500;
   font-size: 1.6rem;
-  color: #255C66;
-
+  color: #255c66;
 }
-.left_col_container{
-    background-color: #fff;
-    padding: 19px 14px;
-    border-radius: 4px;
+.left_col_container {
+  background-color: #fff;
+  padding: 19px 14px;
+  border-radius: 4px;
+}
+.left_second{
+  background-color: #fff;
+  padding: 19px 14px;
+  border-radius: 4px;
+  margin-top: 2rem;
 }

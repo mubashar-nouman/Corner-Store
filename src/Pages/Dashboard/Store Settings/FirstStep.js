@@ -95,7 +95,7 @@ const FirstStep = () => {
                   <Col
                     xs={24}
                     sm={{ span: 16, offset: 8 }}
-                    md={{ span: 14, offset: 7}}
+                    md={{ span: 14, offset: 5}}
                   >
                     <p>Store Description Should be within 90 words</p>
                   </Col>
