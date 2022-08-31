@@ -13,7 +13,6 @@ const onChange = (key) => {
 const Products = () => (
   <>
     <div>
-      <div></div>
       <div className="products">
         <Tabs defaultActiveKey="1" onChange={onChange}>
           <TabPane tab="Products" key="1">

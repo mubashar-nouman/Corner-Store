@@ -33,3 +33,12 @@ hr {
   border-radius: 4px;
   margin-top: 2rem;
 }
+#pricing_details{
+  color: #255C66;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+#refund_details{
+  font-size: 1.8rem;
+  color: #255c66;
+}

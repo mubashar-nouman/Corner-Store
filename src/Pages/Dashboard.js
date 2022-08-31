@@ -11,22 +11,11 @@ import {
   BellOutlined,
 } from "@ant-design/icons";
 import Logo from "../Components/Logo";
-import { Breadcrumb, Layout, Menu, Steps } from "antd";
+import { Button, Layout, Menu, Modal } from "antd";
 import React, { Children, useState } from "react";
 import "./Dashboard.css";
-import SignUp from "./Create Store/SignUp";
-import { Row, Col } from "antd";
 import User from "../img/profile.png";
-import ReactDOM from "react-dom/client";
-// import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
-import Products from "./Dashboard/Products/Products";
-import Discount from "./Discount/Discount";
-import Item from "antd/lib/list/Item";
 import { Outlet, useNavigate } from "react-router-dom";
-import EmailSetup from "../Pages/Email Setup/EmailSetup"
-import Processing from "./Orders/Processing";
-import Orders from "./Orders/Orders";
-// import { Navigate } from "react-router-dom";
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -56,6 +45,9 @@ const Dashboard = (props) => {
   const handleRoutes=(e)=>{
     console.log("eeeeeeeeeeeeeeeeee",e.key);
     switch(e.key) {
+      case "1":
+        navigate("/")
+        break;
       case "2":
         navigate("/products")
         break;
@@ -75,7 +67,6 @@ const Dashboard = (props) => {
         navigate("/settings")
         break;
       default:
-        // code block
     }
   }
   return (

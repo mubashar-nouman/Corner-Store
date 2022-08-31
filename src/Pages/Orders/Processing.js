@@ -1,7 +1,8 @@
-import React from "react";
-import { Breadcrumb, Row, Col, Button, Steps, Tag, Table } from "antd";
+import React, { useState}from "react";
+import { Breadcrumb, Row, Col, Button, Steps, Tag, Table, Modal } from "antd";
 import "./Processing.css";
 import User from "../../img/profile.png";
+import TextField from '../../Components/TextField';
 const { Step } = Steps;
 
 const columns = [
@@ -72,6 +73,24 @@ const data = [
 
 
 const Processing = () => {
+  const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setVisible(false);
+    }, 3000);
+  };
+
+  const handleCancel = () => {
+    setVisible(false);
+  };
+
   return (
     <>
       {/* // Breadcrumbs */}
@@ -105,7 +124,7 @@ const Processing = () => {
           >
             Modify Order
           </Button>
-          <Button danger id="cancelButton">
+          <Button danger id="cancelButton"  onClick={showModal}>
             Cancel Order
           </Button>
         </Col>
@@ -202,6 +221,11 @@ const Processing = () => {
                 <Table columns={columns} dataSource={data} />
                 </Col>
               </Row>
+              <Row>
+                <Col>
+                <p id="pricing_details">Pricing Details</p>
+                </Col>
+              </Row>
 
 
 
@@ -244,6 +268,33 @@ const Processing = () => {
           </div>
         </Col>
       </Row>
+
+
+
+      <Modal
+        visible={visible}
+        title="Title"
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Cancel
+          </Button>,
+          <Button key="submit" type="primary" loading={loading} onClick={handleOk}>
+            Confirm
+          </Button>,
+        ]}
+      >
+        <h1 id="refund_details">Refund Details:</h1>
+        <Row>
+          <Col xs={24} style={{justifyContent: 'flex-end'}}>
+            <TextField place="Enter Currency" title ="Currency:"/>
+            <TextField place="Enter Currency" title ="Refund Amount:"/>
+            <TextField place="Enter Currency" title ="Refund Reason:"/>
+            <TextField place="Enter Currency" title ="Description:"/>
+          </Col>
+        </Row>
+      </Modal>
     </>
   );
 };
