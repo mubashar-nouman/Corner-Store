@@ -7,7 +7,7 @@ import Dashboard from "./Pages/Dashboard";
 import Settings from "./Pages/Dashboard/Store Settings/Settings";
 import Products from "./Pages/Dashboard/Products/Products";
 import Orders from "./Pages/Orders/Orders";
-import Discount from "./Pages/Discount/Discount";
+import AddDiscount from "./Pages/Discount/AddDiscount";
 import Processing from "./Pages/Orders/Processing";
 import CustomersMain from "./Pages/Customers/CustomersMain";
 
@@ -26,7 +26,7 @@ function App() {
           <Route path="customers" element={<CustomersMain />} />
           <Route path="products" element={<Products />} />
           <Route path="orders" element={<Orders />} />
-          <Route path="discounts" element={<Discount />} />
+          <Route path="discounts" element={<AddDiscount />} />
           <Route path="subscription" element={<Processing />} />
           <Route path="settings" element={<Settings />} />
         </Route>

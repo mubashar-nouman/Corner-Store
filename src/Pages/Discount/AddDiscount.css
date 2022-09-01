@@ -1,0 +1,34 @@
+.addDiscount {
+  background-color: #ffffff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+.addDiscount h1 {
+  font-size: 2rem;
+  color: #255c66;
+  text-align: center;
+  font-weight: 500;
+}
+.addDiscount h2 {
+  font-size: 1.8rem;
+  color: #255c66;
+  font-weight: 500;
+}
+.addDiscount p {
+  font-size: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  letter-spacing: 0.15px;
+  color: rgba(58, 53, 65, 0.46);
+  font-weight: 500;
+}
+.ant-radio-wrapper span {
+  color: rgba(58, 53, 65, 0.87);
+  letter-spacing: 0.15px;
+  font-size: 1.4rem;
+}
+.addDiscount hr {
+  margin: 3.5rem 0;
+  border: 1px solid rgba(58, 53, 65, 0.12);
+}

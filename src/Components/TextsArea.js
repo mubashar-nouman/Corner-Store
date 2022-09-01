@@ -5,6 +5,7 @@ import {Form , Input, Row, Col} from 'antd'
 const { TextArea } = Input;
 
 const TextsArea = (props) => {
+  console.log('oooooooooooooo',props.title)
   return (
     <Row>
         <Col xs={24} md={24} min-row={10}>
